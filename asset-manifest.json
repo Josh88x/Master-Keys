@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/masterkeys/static/css/main.b7d79b36.css",
+    "main.js": "/masterkeys/static/js/main.504deb48.js",
+    "static/media/A(2).mp3": "/masterkeys/static/media/A(2).4b1f7e868b7e1d7d3e2a.mp3",
+    "static/media/A-sharp-Bb(2).mp3": "/masterkeys/static/media/A-sharp-Bb(2).435ec7601e99328375e5.mp3",
+    "static/media/A-sharp-Bb.mp3": "/masterkeys/static/media/A-sharp-Bb.85cd29526c6cbd051bf3.mp3",
+    "static/media/A.mp3": "/masterkeys/static/media/A.70575dceae9536686cb9.mp3",
+    "static/media/B(2).mp3": "/masterkeys/static/media/B(2).98e2ccd071eaf7165106.mp3",
+    "static/media/B.mp3": "/masterkeys/static/media/B.136ea28e5d7a52ea63e2.mp3",
+    "static/media/C(2).mp3": "/masterkeys/static/media/C(2).bdbe29fe4f24fbae84aa.mp3",
+    "static/media/C-sharp-Db(2).mp3": "/masterkeys/static/media/C-sharp-Db(2).14d97bb40a4b8f716123.mp3",
+    "static/media/C-sharp-Db.mp3": "/masterkeys/static/media/C-sharp-Db.ff745754c8d05dcdedc9.mp3",
+    "static/media/C.mp3": "/masterkeys/static/media/C.410f091d95f3a5077a6c.mp3",
+    "static/media/D(2).mp3": "/masterkeys/static/media/D(2).c22226f78af88fa22285.mp3",
+    "static/media/D-sharp-Eb(2).mp3": "/masterkeys/static/media/D-sharp-Eb(2).0a5ad6edad4817e1e3bf.mp3",
+    "static/media/D-sharp-Eb.mp3": "/masterkeys/static/media/D-sharp-Eb.3a15ba12512e27d86a03.mp3",
+    "static/media/D.mp3": "/masterkeys/static/media/D.1b88f924f34b5f6d357c.mp3",
+    "static/media/E(2).mp3": "/masterkeys/static/media/E(2).7e2e5ebcf6979089a3e2.mp3",
+    "static/media/E.mp3": "/masterkeys/static/media/E.49c68f43e6912768fd77.mp3",
+    "static/media/F(2).mp3": "/masterkeys/static/media/F(2).e48d9a0649e8c6993389.mp3",
+    "static/media/F-sharp-Gb(2).mp3": "/masterkeys/static/media/F-sharp-Gb(2).3a828399bc746cbf0f8f.mp3",
+    "static/media/F-sharp-Gb.mp3": "/masterkeys/static/media/F-sharp-Gb.4e2b9b8e47da0e5b3a76.mp3",
+    "static/media/F.mp3": "/masterkeys/static/media/F.0031742990f0fdad8be6.mp3",
+    "static/media/G(2).mp3": "/masterkeys/static/media/G(2).c95b1869e2253da27114.mp3",
+    "static/media/G-sharp-Ab(2).mp3": "/masterkeys/static/media/G-sharp-Ab(2).3183c703652cda9167c5.mp3",
+    "static/media/G-sharp-Ab.mp3": "/masterkeys/static/media/G-sharp-Ab.167a88dbe8f5178a9013.mp3",
+    "static/media/G.mp3": "/masterkeys/static/media/G.21c94dc36d3c7e604865.mp3",
+    "index.html": "/masterkeys/index.html",
+    "main.b7d79b36.css.map": "/masterkeys/static/css/main.b7d79b36.css.map",
+    "main.504deb48.js.map": "/masterkeys/static/js/main.504deb48.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7d79b36.css",
+    "static/js/main.504deb48.js"
+  ]
+}
