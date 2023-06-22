@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* animations */
+@keyframes notes-floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* note symbols on the header */
+.note-floating-left {
+    animation: both notes-floating 3s ease-in-out infinite;
+}
+.note-floating-right {
+    animation: both notes-floating 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* piano */
+.piano {
+    display: flex;
+    padding: 2rem;
+}
+
+.key-white {
+    width: 5rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: #333;
+    font-size: 2rem;
+    background-color: white;
+    border: 1px solid #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.key-black {
+    width: 3rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: black;
+    border: 1px solid #333;
+    margin-inline: -27px;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* active states for keys */
+.key-white:active {
+    background-color: #641ae6 !important;
+    color: #fff;
+}
+.key-black:active {
+    background-color: #641ae6;
+    color: #fff;
+}
+
+
+
+.chord-note {
+    border: 2px solid rgb(0, 0, 0) !important;
+    background-color: #1a8ae6 !important;
+    color: #fff !important;
+}
+
+/* making piano responsive */
+@media (min-width: 320px) {
+    .piano {
+        padding: 1rem;
+    }
+
+    .key-white {
+        width: 1.55rem;
+        height: 6.25rem;
+        font-size: .9rem;
+        background-color: white;
+        border: 1px solid #333;
+    }
+    
+    .key-black {
+        width: 1rem;
+        padding-inline: .5rem;
+        height: 4rem;
+        font-size: 0.7rem;
+        background-color: black;
+        border: 1px solid #333;
+        margin-inline: -10.75px;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .key-white {
+        width: 2.5rem;
+        height: 12.5rem;
+        font-size: 1.5rem;
+        background-color: white;
+        border: 1px solid #333;
+    }
+    
+    .key-black {
+        width: 1.5rem;
+        height: 8rem;
+        font-size: .5rem;
+        color: #fff;
+        font-weight: 500;
+        background-color: black;
+        border: 1px solid #333;
+        margin-inline: -13.5px;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .key-white {
+        width: 5rem;
+        height: 25rem;
+        font-size: 2rem;
+        font-weight: 500;
+        background-color: white;
+        border: 1px solid #333;
+    }
+    
+    .key-black {
+        width: 3rem;
+        height: 16rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        background-color: black;
+        border: 1px solid #333;
+        margin-inline: -27px;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,268 @@
+import noteSounds from "../audio/Notes";
+
+
+
+
+const chords = {
+    Major : {
+        C: [noteSounds.C, noteSounds.E, noteSounds.G2],
+        C_Db: [noteSounds.C_Db, noteSounds.F2, noteSounds.G_Ab2],
+        D: [noteSounds.D, noteSounds.F_Gb2, noteSounds.A2],
+        D_Eb: [noteSounds.D_Eb, noteSounds.G2, noteSounds.A_Bb2],
+        E: [noteSounds.E, noteSounds.G_Ab2, noteSounds.B2],
+        F: [noteSounds.F, noteSounds.A, noteSounds.C],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A_Bb, noteSounds.C_Db],
+        G: [noteSounds.G, noteSounds.B, noteSounds.D],
+        G_Ab: [noteSounds.G_Ab, noteSounds.C, noteSounds.D_Eb],
+        A: [noteSounds.A, noteSounds.C_Db, noteSounds.E],
+        A_Bb : [noteSounds.A_Bb, noteSounds.D, noteSounds.F2],
+        B: [noteSounds.B, noteSounds.D_Eb, noteSounds.F_Gb2]
+    },
+    Minor: {
+        C: [noteSounds.C, noteSounds.D_Eb, noteSounds.G2],
+        C_Db: [noteSounds.C_Db,noteSounds.E,noteSounds.G_Ab2],
+        D: [noteSounds.D, noteSounds.F, noteSounds.A2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.F_Gb2, noteSounds.A_Bb2],
+        E: [noteSounds.E, noteSounds.G2, noteSounds.B2],
+        F: [noteSounds.F,noteSounds.G_Ab2, noteSounds.C],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A,noteSounds.C_Db],
+        G: [noteSounds.G, noteSounds.A_Bb, noteSounds.D],
+        G_Ab: [noteSounds.G_Ab, noteSounds.B, noteSounds.D_Eb],
+        A: [noteSounds.A, noteSounds.C, noteSounds.E],
+        A_Bb : [noteSounds.A_Bb, noteSounds.C_Db, noteSounds.F2],
+        B: [noteSounds.B, noteSounds.D, noteSounds.F_Gb2]
+    },
+    Seventh : {
+        C: [noteSounds.C, noteSounds.E, noteSounds.G2, noteSounds.A_Bb2],
+        C_Db: [noteSounds.C_Db,noteSounds.F2,noteSounds.G_Ab2, noteSounds.B2],
+        D: [noteSounds.D, noteSounds.F_Gb2, noteSounds.A2, noteSounds.C2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.G2, noteSounds.A_Bb2, noteSounds.C_Db2],
+        E: [noteSounds.E, noteSounds.G_Ab2, noteSounds.B2, noteSounds.D2],
+        F: [noteSounds.F,noteSounds.A, noteSounds.C, noteSounds.D_Eb2],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A_Bb,noteSounds.C_Db, noteSounds.E],
+        G: [noteSounds.G, noteSounds.B, noteSounds.D, noteSounds.F2],
+        G_Ab: [noteSounds.G_Ab, noteSounds.C, noteSounds.D_Eb, noteSounds.F_Gb2],
+        A: [noteSounds.A, noteSounds.C_Db, noteSounds.E, noteSounds.G2],
+        A_Bb : [noteSounds.A_Bb, noteSounds.D, noteSounds.F2, noteSounds.G_Ab2],
+        B: [noteSounds.B, noteSounds.D_Eb, noteSounds.F_Gb2, noteSounds.A2] 
+    },
+    Major7 : {
+        C: [noteSounds.C, noteSounds.E, noteSounds.G2, noteSounds.B2],
+        C_Db: [noteSounds.C_Db,noteSounds.F2,noteSounds.G_Ab2, noteSounds.C2],
+        D: [noteSounds.D, noteSounds.F_Gb2, noteSounds.A2, noteSounds.C_Db2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.G2, noteSounds.A_Bb2, noteSounds.D2],
+        E: [noteSounds.E, noteSounds.G_Ab2, noteSounds.B2, noteSounds.D_Eb2],
+        F: [noteSounds.F,noteSounds.A, noteSounds.C, noteSounds.E],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A_Bb,noteSounds.C_Db, noteSounds.F2],
+        G: [noteSounds.G, noteSounds.B, noteSounds.D, noteSounds.F_Gb],
+        G_Ab: [noteSounds.G_Ab, noteSounds.C, noteSounds.D_Eb, noteSounds.G2],
+        A: [noteSounds.A, noteSounds.C_Db, noteSounds.E, noteSounds.G_Ab2],
+        A_Bb : [noteSounds.A_Bb, noteSounds.D, noteSounds.F2, noteSounds.A2],
+        B: [noteSounds.B, noteSounds.D_Eb, noteSounds.F_Gb2, noteSounds.A_Bb2]
+    },
+    Minor7 : {
+        C: [noteSounds.C, noteSounds.D_Eb, noteSounds.G2, noteSounds.A_Bb2],
+        C_Db: [noteSounds.C_Db,noteSounds.E2,noteSounds.G_Ab2, noteSounds.B2],
+        D: [noteSounds.D, noteSounds.F2, noteSounds.A2, noteSounds.C2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.F_Gb2, noteSounds.A_Bb2, noteSounds.C_Db2],
+        E: [noteSounds.E, noteSounds.G_Ab2, noteSounds.B2, noteSounds.D2],
+        F: [noteSounds.F,noteSounds.G_Ab, noteSounds.C, noteSounds.D_Eb],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A,noteSounds.C_Db, noteSounds.E],
+        G: [noteSounds.G, noteSounds.A_Bb, noteSounds.D, noteSounds.F2],
+        G_Ab: [noteSounds.G_Ab, noteSounds.C, noteSounds.D_Eb, noteSounds.F_Gb2],
+        A: [noteSounds.A, noteSounds.C, noteSounds.E, noteSounds.G2],
+        A_Bb : [noteSounds.A_Bb, noteSounds.D, noteSounds.F2, noteSounds.G_Ab2],
+        B: [noteSounds.B, noteSounds.D_Eb, noteSounds.F_Gb2, noteSounds.A2]
+    },
+    Augmented : {
+        C: [noteSounds.C, noteSounds.E, noteSounds.G_Ab2],
+        C_Db: [noteSounds.C_Db,noteSounds.F2,noteSounds.A2],
+        D: [noteSounds.D, noteSounds.F_Gb2, noteSounds.A_Bb2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.G2, noteSounds.B2],
+        E: [noteSounds.E, noteSounds.G_Ab2, noteSounds.C2],
+        F: [noteSounds.F,noteSounds.A, noteSounds.C_Db],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A_Bb,noteSounds.D],
+        G: [noteSounds.G, noteSounds.B, noteSounds.D_Eb],
+        G_Ab: [noteSounds.G_Ab, noteSounds.C, noteSounds.E],
+        A: [noteSounds.A, noteSounds.C_Db, noteSounds.F2],
+        A_Bb : [noteSounds.A_Bb, noteSounds.D, noteSounds.F_Gb2],
+        B: [noteSounds.B, noteSounds.D_Eb, noteSounds.G2]
+    },
+    Diminished : {
+        C: [noteSounds.C, noteSounds.D_Eb, noteSounds.F_Gb2],
+        C_Db: [noteSounds.C_Db,noteSounds.E,noteSounds.G2],
+        D: [noteSounds.D, noteSounds.F2, noteSounds.G_Ab2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.F_Gb2, noteSounds.A2],
+        E: [noteSounds.E, noteSounds.G2, noteSounds.A_Bb2],
+        F: [noteSounds.F,noteSounds.G_Ab2, noteSounds.B2],
+        F_Gb: [noteSounds.F_Gb, noteSounds.A2,noteSounds.C2],
+        G: [noteSounds.G, noteSounds.A_Bb2, noteSounds.C_Db2],
+        G_Ab: [noteSounds.G_Ab, noteSounds.B, noteSounds.D],
+        A: [noteSounds.A, noteSounds.C, noteSounds.D_Eb],
+        A_Bb : [noteSounds.A_Bb, noteSounds.C_Db, noteSounds.E],
+        B: [noteSounds.B, noteSounds.D,noteSounds.F]
+    },
+    Sustain4 : {
+        C: [noteSounds.C, noteSounds.F2, noteSounds.G2],
+        C_Db: [noteSounds.C_Db,noteSounds.F_Gb2,noteSounds.G_Ab2],
+        D: [noteSounds.D, noteSounds.G2, noteSounds.A2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.G_Ab2, noteSounds.A_Bb2],
+        E: [noteSounds.E, noteSounds.A2, noteSounds.B2],
+        F: [noteSounds.F,noteSounds.A_Bb2, noteSounds.C],
+        F_Gb: [noteSounds.F_Gb, noteSounds.B,noteSounds.C_Db],
+        G: [noteSounds.G, noteSounds.C, noteSounds.D],
+        G_Ab: [noteSounds.G_Ab, noteSounds.C_Db, noteSounds.D_Eb],
+        A: [noteSounds.A, noteSounds.D, noteSounds.E],
+        A_Bb : [noteSounds.A_Bb, noteSounds.D_Eb, noteSounds.F2],
+        B: [noteSounds.B, noteSounds.E, noteSounds.F_Gb2]
+    },
+    Sustain2 : {
+        C: [noteSounds.C, noteSounds.D, noteSounds.G2],
+        C_Db: [noteSounds.C_Db,noteSounds.D_Eb,noteSounds.G_Ab2],
+        D: [noteSounds.D, noteSounds.E, noteSounds.A2],
+        D_Eb: [noteSounds.D_Eb,noteSounds.F2, noteSounds.A_Bb2],
+        E: [noteSounds.E, noteSounds.F_Gb2, noteSounds.B2],
+        F: [noteSounds.F,noteSounds.G, noteSounds.C],
+        F_Gb: [noteSounds.F_Gb, noteSounds.G_Ab,noteSounds.C_Db],
+        G: [noteSounds.G, noteSounds.A, noteSounds.D],
+        G_Ab: [noteSounds.G_Ab, noteSounds.A_Bb, noteSounds.D_Eb],
+        A: [noteSounds.A, noteSounds.B, noteSounds.E],
+        A_Bb : [noteSounds.A_Bb, noteSounds.C, noteSounds.F2],
+        B: [noteSounds.B, noteSounds.C_Db, noteSounds.F_Gb2]
+    },
+    
+};
+
+const highlightChords = {
+    Major : {
+        C: ["C", "E", "G2"],
+        C_Db: ['C_Db','F2','G_Ab2'],
+        D: ['D', "F_Gb2", 'A2'],
+        D_Eb: ["D_Eb",'G2', 'A_Bb2'],
+        E: ['E', 'G_Ab2', 'B2'],
+        F: ['F','A', 'C'],
+        F_Gb: ['F_Gb', 'A_Bb','C_Db'],
+        G: ['G', 'B', 'D'],
+        G_Ab: ['G_Ab', 'C', 'D_Eb'],
+        A: ['A', 'C_Db', 'E'],
+        A_Bb : ['A_Bb', 'D', 'F2'],
+        B: ['B', 'D_Eb', 'F_Gb2']
+    },
+    Minor: {
+        C: ["C", "D_Eb", "G2"],
+        C_Db: ['C_Db','E','G_Ab2'],
+        D: ['D', "F2", 'A2'],
+        D_Eb: ["D_Eb",'F_Gb2', 'A_Bb2'],
+        E: ['E', 'G2', 'B2'],
+        F: ['F','G_Ab', 'C'],
+        F_Gb: ['F_Gb', 'A','C_Db'],
+        G: ['G', 'A_Bb', 'D'],
+        G_Ab: ['G_Ab', 'B', 'D_Eb'],
+        A: ['A', 'C', 'E'],
+        A_Bb : ['A_Bb', 'C_Db', 'F2'],
+        B: ['B', 'D', 'F_Gb2']
+    },
+    Seventh : {
+        C: ["C", "E", "G2", "A_Bb2"],
+        C_Db: ['C_Db','F2','G_Ab2', "B2"],
+        D: ['D', "F_Gb2", 'A2', "C2"],
+        D_Eb: ["D_Eb",'G2', 'A_Bb2', "C_Db2"],
+        E: ['E', 'G_Ab2', 'B2', "D2"],
+        F: ['F','A', 'C', "D_Eb2"],
+        F_Gb: ['F_Gb', 'A_Bb','C_Db', "E"],
+        G: ['G', 'B', 'D', "F2"],
+        G_Ab: ['G_Ab', 'C', 'D_Eb', "F_Gb2"],
+        A: ['A', 'C_Db', 'E', "G2"],
+        A_Bb : ['A_Bb', 'D', 'F2', "G_Ab2"],
+        B: ['B', 'D_Eb', 'F_Gb2', "A2"] 
+    },
+    Major7 : {
+        C: ["C", "E", "G2", "B2"],
+        C_Db: ['C_Db','F2','G_Ab2', "C2"],
+        D: ['D', "F_Gb2", 'A2', "C_Db2"],
+        D_Eb: ["D_Eb",'G2', 'A_Bb2', "D2"],
+        E: ['E', 'G_Ab2', 'B2', "D_Eb2"],
+        F: ['F','A', 'C', "E"],
+        F_Gb: ['F_Gb', 'A_Bb','C_Db', "F2"],
+        G: ['G', 'B', 'D', "F_Gb"],
+        G_Ab: ['G_Ab', 'C', 'D_Eb', "G2"],
+        A: ['A', 'C_Db', 'E', "G_Ab2"],
+        A_Bb : ['A_Bb', 'D', 'F2', "A2"],
+        B: ['B', 'D_Eb', 'F_Gb2', "A_Bb2"]
+    },
+    Minor7 : {
+        C: ["C", "D_Eb", "G2", "A_Bb2"],
+        C_Db: ['C_Db','E2','G_Ab2', "B2"],
+        D: ['D', "F2", 'A2', "C2"],
+        D_Eb: ["D_Eb",'F_Gb2', 'A_Bb2', "C_Db2"],
+        E: ['E', 'G_Ab2', 'B2', "D2"],
+        F: ['F','G_Ab', 'C', "D_Eb"],
+        F_Gb: ['F_Gb', 'A','C_Db', "E"],
+        G: ['G', 'A_Bb', 'D', "F2"],
+        G_Ab: ['G_Ab', 'C', 'D_Eb', "F_Gb2"],
+        A: ['A', 'C', 'E', "G2"],
+        A_Bb : ['A_Bb', 'D', 'F2', "G_Ab2"],
+        B: ['B', 'D_Eb', 'F_Gb2', "A2"]
+    },
+    Augmented : {
+        C: ["C", "E", "G_Ab2"],
+        C_Db: ['C_Db','F2','A2'],
+        D: ['D', "F_Gb2", 'A_Bb2'],
+        D_Eb: ["D_Eb",'G2', 'B2'],
+        E: ['E', 'G_Ab2', 'C2'],
+        F: ['F','A', 'C_Db'],
+        F_Gb: ['F_Gb', 'A_Bb','D'],
+        G: ['G', 'B', 'D_Eb'],
+        G_Ab: ['G_Ab', 'C', 'E'],
+        A: ['A', 'C_Db', 'F2'],
+        A_Bb : ['A_Bb', 'D', 'F_Gb2'],
+        B: ['B', 'D_Eb', 'G2']
+    },
+    Diminished : {
+        C: ["C", "D_Eb", "F_Gb2"],
+        C_Db: ['C_Db','E','G2'],
+        D: ['D', "F2", 'G_Ab2'],
+        D_Eb: ["D_Eb",'F_Gb2', 'A2'],
+        E: ['E', 'G2', 'A_Bb2'],
+        F: ['F','G_Ab', 'B'],
+        F_Gb: ['F_Gb', 'A','C'],
+        G: ['G', 'A_Bb', 'C_Db'],
+        G_Ab: ['G_Ab', 'B', 'D'],
+        A: ['A', 'C', 'D_Eb'],
+        A_Bb : ['A_Bb', 'C_Db', 'E'],
+        B: ['B', 'D', 'F']
+    },
+    Sustain4 : {
+        C: ["C", "F2", "G2"],
+        C_Db: ['C_Db','F_Gb2','G_Ab2'],
+        D: ['D', "G2", 'A2'],
+        D_Eb: ["D_Eb",'G_Ab2', 'A_Bb2'],
+        E: ['E', 'A2', 'B2'],
+        F: ['F','A_Bb2', 'C'],
+        F_Gb: ['F_Gb', 'B','C_Db'],
+        G: ['G', 'C', 'D'],
+        G_Ab: ['G_Ab', 'C_Db', 'D_Eb'],
+        A: ['A', 'D', 'E'],
+        A_Bb : ['A_Bb', 'D_Eb', 'F2'],
+        B: ['B', 'E', 'F_Gb2']
+    },
+    Sustain2 : {
+        C: ["C", "D", "G2"],
+        C_Db: ['C_Db','D_Eb','G_Ab2'],
+        D: ['D', "E", 'A2'],
+        D_Eb: ["D_Eb",'F2', 'A_Bb2'],
+        E: ['E', 'F_Gb2', 'B2'],
+        F: ['F','G', 'C'],
+        F_Gb: ['F_Gb', 'G_Ab','C_Db'],
+        G: ['G', 'A', 'D'],
+        G_Ab: ['G_Ab', 'A_Bb', 'D_Eb'],
+        A: ['A', 'B', 'E'],
+        A_Bb : ['A_Bb', 'C', 'F2'],
+        B: ['B', 'C_Db', 'F_Gb2']
+    },
+}
+
+
+// console.log(`chords:${chords}\nmajor:${chords.major.c}\n`)
+export default chords; 
+export {highlightChords};
